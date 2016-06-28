@@ -1,3 +1,5 @@
+.idea
+.gitignore
 *.pyc
 __pycache__
 myvenv
