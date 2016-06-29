@@ -1,33 +1,40 @@
+{% load staticfiles %}
 <html>
     <head>
+
         <title>Django Kid</title>
+        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+
+    </head>
+
      <body>
-        <div>
-            <h1><a href="">=Django Kid=</a></h1>
+        <div class="welcome">
+            <h2><a href="/">=Django Kid=</a></h2>
         </div>
 
-        {{ posts }}
+       <!-- { posts }} -->
 
-       {% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-        {% endfor %}
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Apenas mais um blog!! Desenvolvimento de projetos em Python utilizando o framework Django!! </p>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% for post in posts %}
+                    <div class="post">
+                        <div class="date">
+                            {{ post.published_date }}
+                        </div>
+                            <h1><a href="">{{ post.title }}</a></h1>
+                            <p>{{ post.text|linebreaksbr }}</p>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
         </div>
+        <div class="footer">
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Versionameto de projeto utilizando git. Ambiente de testes hospedado na <a href="http://euclidespaim.pythonanywhere.com">euclidespaim.pythonanywhere.com</a> </p>
         </div>
-
-
-    </body>
+     </body>
 </html>
