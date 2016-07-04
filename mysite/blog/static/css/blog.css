@@ -9,12 +9,12 @@ body {
 }
 
 h1 a {
-    color: #FCA205;
+    color: /*#9fc*/ #FCA205;
     font-family: 'Lobster';
 }
 
 h2 a {
-    color: #FCA205;
+    color: /*#9fc*/ #FCA205;
     font-size: 46pt;
     font-family: 'Lobster';
 }
@@ -36,6 +36,6 @@ h2 a {
 }
 .welcome {
 
-    padding:50px;
+    padding:75px;
     background-color:rgba(43, 115, 156, 0.72);
 
